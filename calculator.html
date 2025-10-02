@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #023581;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: #080303;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .display {
+            height: 60px;
+            background: #222;
+            color: #fff;
+            font-size: 2rem;
+            text-align: right;
+            padding: 10px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background: #e0e0e0;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #d0d0d0;
+        }
+
+        .equal {
+            grid-column: span 2;
+            background: #4caf50;
+            color: white;
+        }
+
+        .equal:hover {
+            background: #45a049;
+        }
+
+        .clear {
+            background: #f44336;
+            color: white;
+        }
+
+        .clear:hover {
+            background: #e53935;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="deleteLast()">⌫</button>
+
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('-')">−</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('+')">+</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="appendValue('.')">.</button>
+
+            <button onclick="appendValue('0')">0</button>
+            <button class="equal" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById('display');
+        let currentInput = '';
+
+        function appendValue(value) {
+            if (currentInput === '' && (value === '+' || value === '-' || value === '*' || value === '/')) return;
+            currentInput += value;
+            display.textContent = currentInput;
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            display.textContent = '0';
+        }
+
+        function deleteLast() {
+            currentInput = currentInput.slice(0, -1);
+            display.textContent = currentInput || '0';
+        }
+
+        function calculate() {
+            try {
+                currentInput = eval(currentInput).toString();
+                display.textContent = currentInput;
+            } catch {
+                display.textContent = 'Error';
+                currentInput = '';
+            }
+        }
+    </script>
+</body>
+
+</html>
