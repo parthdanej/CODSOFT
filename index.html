@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parth Danej | Portfolio</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, #2c3e50, #4ca1af);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header p {
+      font-size: 1.2em;
+    }
+
+    nav {
+      background: #333;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4ca1af;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    /* About Section */
+    .about-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .about-container img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #4ca1af;
+    }
+
+    .about-container p {
+      flex: 1;
+      min-width: 250px;
+      font-size: 1.1em;
+    }
+
+    /* Skills Section */
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill {
+      background: #4ca1af;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* Certificates */
+    .certificate-list {
+      list-style: none;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    .certificate-list li {
+      margin: 10px 0;
+    }
+
+    .certificate-list a {
+      color: #2c3e50;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .certificate-list a:hover {
+      color: #4ca1af;
+    }
+
+    /* Projects */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Resume */
+    .resume-btn {
+      display: block;
+      text-align: center;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #2c3e50;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .resume-btn:hover {
+      background: #4ca1af;
+    }
+
+    /* Contact */
+    .contact-info {
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .contact-info a {
+      color: #4ca1af;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Parth Danej</h1>
+    <p>Aspiring Web Developer | IT Enthusiast</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="photo.jpg" alt="Profile Picture">
+      <p>I am an enthusiastic Computer student passionate about web development, programming, and building creative digital solutions. I enjoy learning new technologies and applying them to real-world projects.</p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">GitHub</div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates">
+    <h2>Certificates</h2>
+    <ul class="certificate-list">
+      <li>
+        <a href="https://drive.google.com/file/d/1u-lyHhT5emyJyF4bZFI3_TPq4IlimXcz/view?usp=drive_link" target="_blank">
+          Certificate: C++ Programming
+        </a>
+      </li>
+      <li>
+    </ul>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <h2>My Resume</h2>
+    <a class="resume-btn" href="https://drive.google.com/file/d/1vGpDGTMMYy3bHbRThGQL-TXWrzGJLZRv/view?usp=drive_link" target="_blank">Download Resume</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>Email: <a href=>"Parthdanej2005@gmail.com"</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/parth-danej-6088a7289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">View Profile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Parth Danej. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
